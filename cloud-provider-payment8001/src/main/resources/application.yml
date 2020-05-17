@@ -12,8 +12,3 @@ spring:
     password: root
 
 
-mybatis:
-  mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.wt.springcloud.entities    # 所有Entity别名类所在包
-
-
