@@ -3,6 +3,7 @@ package com.wt.springcloud;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Bean;
  * description
  */
 @SpringBootApplication
+@EnableDiscoveryClient
 public class PaymentMain8001 {
 
     public static void main(String[] args) {

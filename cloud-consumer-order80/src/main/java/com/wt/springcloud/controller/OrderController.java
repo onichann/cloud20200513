@@ -21,9 +21,10 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+//    public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
-    @GetMapping(value = "/consumer/payment/create",produces="MediaType.APPLICATION_JSON_VALUE;charset=utf-8")
+    @GetMapping("/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment)
     {
         CommonResult commonResult = restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
