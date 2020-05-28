@@ -26,4 +26,9 @@ hs_err_pid*
 .idea
 /target/
 /cloud-provider-payment8001/target/
+*.iml
 
+/cloud-consumer-order80/target/classes/application.yml
+/cloud-eureka-server7001/target/classes/application.yml
+/cloud-eureka-server7002/target/classes/application.yml
+/cloud-provider-payment8002/target/classes/application.yml

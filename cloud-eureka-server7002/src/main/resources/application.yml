@@ -16,7 +16,9 @@ eureka:
 
 
 
-
+spring:
+  application:
+    name: eurekaServer
 
 
 
