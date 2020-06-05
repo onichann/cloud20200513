@@ -33,3 +33,4 @@ hs_err_pid*
 /cloud-eureka-server7002/target/classes/application.yml
 /cloud-provider-payment8002/target/classes/application.yml
 /cloud-consumerzk-order80/target/
+/cloud-consumer-order80/target

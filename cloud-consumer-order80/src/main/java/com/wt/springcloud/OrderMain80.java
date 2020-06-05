@@ -1,13 +1,10 @@
 package com.wt.springcloud;
 
-import com.wt.myRule.MyRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.web.client.ResponseErrorHandler;
@@ -23,7 +20,7 @@ import java.time.Duration;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name ="CLOUD-PAYMENT-SERVICE",configuration = MyRule.class)
+//@RibbonClient(name ="CLOUD-PAYMENT-SERVICE",configuration = MyRule.class)
 public class OrderMain80 {
 
     public static void main(String[] args) {
@@ -34,7 +31,7 @@ public class OrderMain80 {
     private RestTemplateBuilder builder;
 
     @Bean
-    @LoadBalanced
+//    @LoadBalanced
     public RestTemplate restTemplate() {
         RestTemplate restTemplate= builder.setConnectTimeout(Duration.ofMillis(100000)).setReadTimeout(Duration.ofMillis(100000)).build();
         restTemplate.setErrorHandler(new ResponseErrorHandler() {
