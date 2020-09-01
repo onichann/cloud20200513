@@ -34,3 +34,5 @@ hs_err_pid*
 /cloud-provider-payment8002/target/classes/application.yml
 /cloud-consumerzk-order80/target/
 /cloud-consumer-order80/target
+/cloud-consumer-feign-order80/target
+/cloud-consumer-feign-hystrix-order80/target
