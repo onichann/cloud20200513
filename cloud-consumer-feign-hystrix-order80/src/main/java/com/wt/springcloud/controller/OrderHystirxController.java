@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author wutong
  * @date 2020/9/1 15:21
- * introduction
+ * introduction  服务降级默认使用在客户端（调用方）
  */
 @RestController
 @Slf4j
