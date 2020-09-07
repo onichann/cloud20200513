@@ -36,3 +36,4 @@ hs_err_pid*
 /cloud-consumer-order80/target
 /cloud-consumer-feign-order80/target
 /cloud-consumer-feign-hystrix-order80/target
+/cloud-consumer-hystrix-dashboard9001/target
