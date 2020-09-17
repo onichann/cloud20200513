@@ -22,6 +22,10 @@
             <artifactId>hutool-all</artifactId>
             <version>5.1.0</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>
