@@ -15,6 +15,11 @@ spring:
           default-label: main
       ####读取分支
       label: main
+  rabbitmq:
+    host: 47.100.5.152
+    port: 5672
+    username: root
+    password: root
 
 #服务注册到eureka地址
 eureka:
@@ -23,4 +28,9 @@ eureka:
       defaultZone: http://localhost:7001/eureka
 
 
-
+##rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
