@@ -14,6 +14,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * https://docs.spring.io/spring-cloud-config/docs/2.2.5.RELEASE/reference/html/
  * 可以集群配置
+ *  curl -X POST "http://localhost:3344/actuator/bus-refresh"
+ *  curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"
  */
 public class ConfigCenterMain3344 {
 
