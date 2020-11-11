@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.ClientHttpResponse;
@@ -31,7 +32,7 @@ public class OrderMain80 {
     private RestTemplateBuilder builder;
 
     @Bean
-//    @LoadBalanced
+    @LoadBalanced
     public RestTemplate restTemplate() {
         RestTemplate restTemplate= builder.setConnectTimeout(Duration.ofMillis(100000)).setReadTimeout(Duration.ofMillis(100000)).build();
         restTemplate.setErrorHandler(new ResponseErrorHandler() {
