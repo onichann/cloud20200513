@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class FlowLimitController {
 
     @GetMapping("/testA")
-    public String testA()
-    {
+    public String testA() throws InterruptedException {
+//        TimeUnit.SECONDS.sleep(1);
         return "------testA";
     }
 
