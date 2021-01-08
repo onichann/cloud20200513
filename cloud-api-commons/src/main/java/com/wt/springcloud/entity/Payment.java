@@ -1,5 +1,8 @@
 package com.wt.springcloud.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -7,7 +10,8 @@ import java.io.Serializable;
  * @date 2020-05-17 下午 10:35
  * description
  */
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class Payment implements Serializable {
 
     private String id;
