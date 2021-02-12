@@ -12,7 +12,18 @@ spring:
         port: 8719
         dashboard: localhost:8080
 #        dashboard: 47.100.5.152:9001 #配置Sentinel dashboard地址
-#        client-ip: 8ca65248d673.ngrok.io
+        #client-ip: 8ca65248d673.ngrok.io
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 47.100.5.152:8848
+            dataId: ${spring.application.name}-sentinel
+            groupId: DEFAULT_GROUP
+            data-type: json #数据格式
+            # 规则类型，取值见：
+            # org.springframework.cloud.alibaba.sentinel.datasource.RuleType
+            rule-type: flow
+
 
 
 management:

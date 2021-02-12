@@ -25,3 +25,5 @@ service-url:
 feign:
   sentinel:
     enabled: true
+
+#对应cloudalibaba-provider-payment9004 和cloudalibaba-provider-payment9003

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date 2021/1/29 10:50
  * introduction
  */
+
 @FeignClient(value = "nacos-payment-provider",fallback = PaymentFallbackService.class)
 public interface PaymentService {
 
