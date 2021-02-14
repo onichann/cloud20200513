@@ -1,0 +1,23 @@
+[
+    {
+        "resource":"/A",//资源名称
+        "limitApp":"default",//来源应用
+        "grade":1,//阈值类型，0线程数，1QPS
+        "count":1,//单机阈值
+        "strategy":0,//流控模式，0表示直接，1表示关联，2表示链路
+        "controlBehavior":0,//流控效果 ，0表示快速失败，1表示warm up，2表示排队等待
+        "clusterMode":false //是否集群
+    }
+]
+
+[
+    {
+        "resource":"/rateLimit/byUrl",
+        "limitApp":"default",
+        "grade":1,
+        "count":1,
+        "strategy":0,
+        "controlBehavior":0,
+        "clusterMode":false
+    }
+]

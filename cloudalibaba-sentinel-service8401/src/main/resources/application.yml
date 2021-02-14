@@ -17,8 +17,8 @@ spring:
         ds1:
           nacos:
             server-addr: 47.100.5.152:8848
-            dataId: ${spring.application.name}-sentinel
-            groupId: DEFAULT_GROUP
+            dataId: ${spring.application.name}-flow-rules
+            groupId: SENTINEL_GROUP
             data-type: json #数据格式
             # 规则类型，取值见：
             # org.springframework.cloud.alibaba.sentinel.datasource.RuleType
