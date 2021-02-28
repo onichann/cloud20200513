@@ -33,9 +33,15 @@
 <!--        </dependency>-->
 
         <!--seata-->
+<!--        <dependency>-->
+<!--            <groupId>io.seata</groupId>-->
+<!--            <artifactId>seata-all</artifactId>-->
+<!--            <version>1.4.0</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>io.seata</groupId>
-            <artifactId>seata-all</artifactId>
+            <artifactId>seata-spring-boot-starter</artifactId>
             <version>1.4.0</version>
         </dependency>
 
@@ -43,9 +49,13 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
             <exclusions>
+<!--                <exclusion>-->
+<!--                    <groupId>seata-all</groupId>-->
+<!--                    <artifactId>io.seata</artifactId>-->
+<!--                </exclusion>-->
                 <exclusion>
-                    <groupId>seata-all</groupId>
-                    <artifactId>io.seata</artifactId>
+                    <groupId>io.seata</groupId>
+                    <artifactId>seata-spring-boot-starter</artifactId>
                 </exclusion>
             </exclusions>
 <!--            <exclusions>-->

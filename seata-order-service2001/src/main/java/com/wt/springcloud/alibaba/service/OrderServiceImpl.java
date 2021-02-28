@@ -1,6 +1,7 @@
 package com.wt.springcloud.alibaba.service;
 
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,9 +33,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
      * 简单说：下订单->扣库存->减余额->改状态
      */
     @Override
+    @GlobalTransactional(name ="fsp-create-order",rollbackFor = Exception.class)
     public void create(Order order) {
         log.info("----->开始新建订单");
         //1 新建订单
+        order.setStatus(0);
         save(order);
 
         //2 扣减库存
@@ -50,7 +53,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         //4 修改订单状态，从零到1,1代表已经完成
         log.info("----->修改订单状态开始");
         order.setStatus(1);
-        update(new UpdateWrapper<Order>().eq(Order.COL_USER_ID, order.getUserId()));
+        update(order,new UpdateWrapper<Order>().eq(Order.COL_USER_ID, order.getUserId()).eq(Order.COL_STATUS,0));
         log.info("----->修改订单状态结束");
 
         log.info("----->下订单结束了，O(∩_∩)O哈哈~");

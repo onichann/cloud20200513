@@ -14,7 +14,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: com.mysql.cj.jdbc.Driver              # mysql驱动包
-    url: jdbc:mysql://127.0.0.1:3306/seata_storage?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/seata_account?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: root
 
@@ -22,3 +22,9 @@ logging:
   level:
     io:
       seata: info
+    com:
+      wt:
+        springcloud: debug
+
+seata:
+  tx-service-group: fsp_tx_group

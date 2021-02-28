@@ -22,3 +22,11 @@ logging:
   level:
     io:
       seata: info
+    com:
+      wt:
+        springcloud: debug
+
+seata:
+  tx-service-group: fsp_tx_group
+
+#http://localhost:2001/order/create?userId=1&productId=1&count=10&money=100
